@@ -1,0 +1,330 @@
+{
+	"info": {
+		"_postman_id": "f97938d2-68df-4770-82b0-9b7c15f60d96",
+		"name": "YouTube Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Validate API Key",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/search?key={{key}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/search?key={{key}}&part=snippet&q=youtube&maxResults=20&channelId={{channelId}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "part",
+							"value": "snippet"
+						},
+						{
+							"key": "type",
+							"value": "playlist",
+							"disabled": true
+						},
+						{
+							"key": "q",
+							"value": "youtube"
+						},
+						{
+							"key": "maxResults",
+							"value": "20"
+						},
+						{
+							"key": "channelId",
+							"value": "{{channelId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Channel",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/channels?key={{key}}&id={{channelId}}&part=snippet,contentDetails,statistics",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"channels"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "id",
+							"value": "{{channelId}}"
+						},
+						{
+							"key": "part",
+							"value": "snippet,contentDetails,statistics"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Playlists",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/playlists?key={{key}}&channelId={{channelId}}&part=snippet,contentDetails",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"playlists"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "channelId",
+							"value": "{{channelId}}"
+						},
+						{
+							"key": "part",
+							"value": "snippet,contentDetails"
+						},
+						{
+							"key": "id",
+							"value": "PLTwZJUo8myH5RDEc3RnN6p_AtLH2T4HI3",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PlaylistsItem",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/playlistItems?key={{key}}&part=snippet,contentDetails&playlistId=PLPZQWIjupl6fs0Eg0hD5XB1mJdBLcM69X",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"playlistItems"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "part",
+							"value": "snippet,contentDetails"
+						},
+						{
+							"key": "playlistId",
+							"value": "PLPZQWIjupl6fs0Eg0hD5XB1mJdBLcM69X"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Video",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/videos?key={{key}}&part=snippet&id=ud4P45zhCk0",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"videos"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "part",
+							"value": "snippet"
+						},
+						{
+							"key": "id",
+							"value": "ud4P45zhCk0"
+						},
+						{
+							"key": "part",
+							"value": "snippet",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/videoCategories?key={{key}}&part=snippet&id=44",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"videoCategories"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "part",
+							"value": "snippet"
+						},
+						{
+							"key": "regionCode",
+							"value": "IN",
+							"disabled": true
+						},
+						{
+							"key": "id",
+							"value": "44"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comments Threds",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/commentThreads?key={{key}}&part=snippet,replies&videoId=ud4P45zhCk0",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"commentThreads"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "part",
+							"value": "snippet,replies"
+						},
+						{
+							"key": "maxResults",
+							"value": "50",
+							"disabled": true
+						},
+						{
+							"key": "videoId",
+							"value": "ud4P45zhCk0"
+						},
+						{
+							"key": "id",
+							"value": "{{channelId}}",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/comments?key={{key}}&part=snippet&parentId={{channelId}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"comments"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "part",
+							"value": "snippet"
+						},
+						{
+							"key": "parentId",
+							"value": "{{channelId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "channelId",
+			"value": "UCxERKHvImCEPydX6JHGVwzQ",
+			"type": "string"
+		},
+		{
+			"key": "url",
+			"value": "https://www.googleapis.com/youtube/v3",
+			"type": "string"
+		}
+	]
+}
